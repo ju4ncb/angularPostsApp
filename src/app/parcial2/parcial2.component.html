@@ -1,0 +1,77 @@
+<div *ngIf="!showCommentsForPostId">
+  <h1>Listado de Posts</h1>
+  <div class="post-container">
+    <div class="header">
+      <h2>Listado de usuarios</h2>
+    </div>
+    <div class="filter">
+      <label>Usuarios:</label>
+      <select [(ngModel)]="selectedUser">
+        <option [ngValue]="null" selected hidden>
+          --Seleccione el Usuario--
+        </option>
+        <option *ngFor="let user of users" [ngValue]="user">
+          {{ user.name }}
+        </option>
+      </select>
+      <button (click)="filterPosts()">OK</button>
+    </div>
+    <div *ngIf="selectedUserOk" class="detalles-usuario">
+      Posts del usuario: {{ selectedUserName }}
+    </div>
+  </div>
+  <table class="posts-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>UserID</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+        <td>{{ post.userId }}</td>
+        <td><button (click)="showComments(post.id)">Coment</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="showCommentsForPostId !== null" class="comment-section">
+  <h1>Comentarios del Post</h1>
+  <div class="post-container">
+    <div class="header">
+      <h2>Comentario de: {{ selectedUser?.name }}</h2>
+    </div>
+    <div class="post-details">
+      Post {{ selectedPost?.id }}, título:
+      <strong>"{{ selectedPost?.title }}"</strong>
+    </div>
+    <table class="comments-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Body</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comment of comments">
+          <td>{{ comment.id }}</td>
+          <td>{{ comment.name }}</td>
+          <td>{{ comment.body }}</td>
+          <td>{{ comment.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="back-button">
+      <button (click)="backToPosts()">Regresar</button>
+    </div>
+  </div>
+</div>

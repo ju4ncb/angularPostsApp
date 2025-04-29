@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+$color-bg: #edfcfc;
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.swal2-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+body{
+    background: $color-bg;
+    min-height: 100vh;
+    display: grid;
+}

@@ -1,0 +1,131 @@
+$color-bg: #edfcfc;
+$color-bg2: #d6b6ff;
+$color-bg3: #382449;
+$color-extra1: #dcffff;
+$color-extra2: #b575ff;
+$color-extra3: #79ffed;
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header{
+    background: $color-bg2;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    outline: 15px solid $color-extra2;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    .options{
+        a{
+            text-decoration: none;
+            background: $color-bg;
+            padding: 4px;
+            border-radius: 5px;
+            color: $color-bg3;
+            border: 1px $color-bg3 solid;
+        }
+    }
+}
+
+.title-container{
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    box-shadow: $color-extra3 20px 20px;
+    background-color: $color-extra1;
+}
+
+main{
+    background: $color-bg;
+    overflow: hidden;
+    min-height: calc(100vh - 250px - 120px);
+    margin: 20px 20px;
+    
+}
+
+.footer{
+    clip-path: polygon(
+        100% 100%,
+        0% 100% , 
+        0.00% 22.86%, 
+        2.00% 22.30%, 
+        4.00% 20.67%, 
+        6.00% 18.15%, 
+        8.00% 14.96%, 
+        10.00% 11.43%, 
+        12.00% 7.90%, 
+        14.00% 4.71%, 
+        16.00% 2.18%, 
+        18.00% 0.56%, 
+        20.00% 0.00%,
+        22.00% 0.56%,
+        24.00% 2.18%,
+        26.00% 4.71%,
+        28.00% 7.90%,
+        30.00% 11.43%,
+        32.00% 14.96%,
+        34.00% 18.15%,
+        36.00% 20.67%,
+        38.00% 22.30%,
+        40.00% 22.86%,
+        42.00% 22.30%,
+        44.00% 20.67%,
+        46.00% 18.15%,
+        48.00% 14.96%,
+        50.00% 11.43%,
+        52.00% 7.90%,
+        54.00% 4.71%,
+        56.00% 2.18%,
+        58.00% 0.56%,
+        60.00% 0.00%,
+        62.00% 0.56%,
+        64.00% 2.18%,
+        66.00% 4.71%,
+        68.00% 7.90%,
+        70.00% 11.43%,
+        72.00% 14.96%,
+        74.00% 18.15%,
+        76.00% 20.67%,
+        78.00% 22.30%,
+        80.00% 22.86%,
+        82.00% 22.30%,
+        84.00% 20.67%,
+        86.00% 18.15%,
+        88.00% 14.96%,
+        90.00% 11.43%,
+        92.00% 7.90%,
+        94.00% 4.71%,
+        96.00% 2.18%,
+        98.00% 0.56%,
+        100.00% 0.00%
+    );    
+    background: $color-bg3;
+    color: $color-bg;
+    display: grid;
+    height: 120px;
+    padding: 50px 0 5px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.footer-left-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    padding-left: 1rem;
+    justify-items: start;
+    align-items: center;
+}
+
+.footer-right-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    padding-right: 1rem;
+    justify-items: end;
+    align-items: center;
+}

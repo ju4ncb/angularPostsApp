@@ -1,0 +1,95 @@
+
+$color-content-header: #a575ff;
+$color-content-table: #f5e9fd;
+$color-contrast-table: #623ba1;
+$color-btn-1: #3cc1ff;
+$color-btn-2: #ffcb3c;
+$color-btn-3: #ff3c3c;
+
+button{
+  color: white !important;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.post-container {
+    border: 1px solid $color-contrast-table;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: $color-content-header;
+  
+    .header {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      h2{
+        text-align: center;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  
+    .detalles-usuario {
+      color: white;
+      font-size: 20px;
+      margin: 0.5rem 0;
+    }
+
+    .filter {
+      color: white;
+      font-size: 20px;
+      margin: 1rem 0;
+      label, select{
+        margin-right: 10px;
+      }
+      button{
+        font-size: 16px;
+        background: $color-btn-1;
+      }
+      select{
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .posts-table,
+  .comments-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid $color-contrast-table;
+    background: $color-content-table;
+    th{
+        background: $color-content-header;
+        color: white;
+    }
+    th,
+    td {
+      border: 1px solid $color-contrast-table;
+      padding: 0.5rem;
+      button{
+        background: $color-btn-2;
+      }
+    }
+  }
+  
+  .comment-section {
+    margin-top: 2rem;
+  
+    .post-details {
+      width: fit-content;
+      padding-bottom: 5px;
+      font-size: 20px;
+      margin: 1rem 0;
+      border-bottom: $color-contrast-table 2px solid;
+    }
+  
+    .back-button {
+      button{
+        background: $color-btn-3;
+      }
+      text-align: right;
+      margin-top: 1rem;
+    }
+  }
